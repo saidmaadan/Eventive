@@ -10,7 +10,7 @@ import { HomePage } from '../pages/home/home';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any
+  rootPage: any;
   apikey: Apikey;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
@@ -24,11 +24,11 @@ export class MyApp {
       messagingSenderId: this.apikey.messagingSenderId
     });
 
-    const unsubscribe = firebase.auth().onAuthStateChanged((user) =>{
-      if(!user){
+    const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
+      if (!user) {
         this.rootPage = 'login';
         unsubscribe();
-      }else{
+      } else {
         this.rootPage = HomePage;
         unsubscribe();
       }
