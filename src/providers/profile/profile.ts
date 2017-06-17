@@ -20,13 +20,13 @@ export class ProfileProvider {
   updateName(firstName: string, lastName: string): firebase.Promise<void>{
     return this.userProfile.update({
       firstName: firstName,
-      lastName: lastName
+      lastName: lastName,
     });
   }
 
-  updateDOB(birthDate: string): firebase.Promise<any>{
+  updateDOB(birthDate: string): firebase.Promise<void>{
     return this.userProfile.update({
-      birthDate: birthDate
+      birthDate: birthDate,
     });
   }
 

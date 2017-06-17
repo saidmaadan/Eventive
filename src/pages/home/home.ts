@@ -16,4 +16,11 @@ export class HomePage {
     this.navCtrl.push('profile');
   }
 
+  createEvent(){
+    this.navCtrl.push('event-create');
+    
+  }
+
+  eventList(){ this.navCtrl.push('event-list'); }
+
 }

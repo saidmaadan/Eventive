@@ -35,7 +35,7 @@ export class LoginPage {
       this.authProvider.loginUser(this.loginForm.value.email, this.loginForm.value.password)
         .then(AuthProvider => {
           this.loading.dismiss().then(() => {
-            this.navCtrl.setRoot(HomePage);
+            this.navCtrl.setRoot('HomePage');
           });
         }, error => {
           this.loading.dismiss().then(() => {

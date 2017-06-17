@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import firebase from 'firebase';
 import { Apikey } from '../private/apikey';
 
-import { HomePage } from '../pages/home/home';
+// import { HomePage } from '../pages/home/home';
 @Component({
   templateUrl: 'app.html'
 })
@@ -29,7 +29,7 @@ export class MyApp {
         this.rootPage = 'login';
         unsubscribe();
       } else {
-        this.rootPage = HomePage;
+        this.rootPage = 'HomePage';
         unsubscribe();
       }
     });
