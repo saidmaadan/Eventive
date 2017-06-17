@@ -12,4 +12,8 @@ export class HomePage {
 
   }
 
+  goToProfile(){
+    this.navCtrl.push('profile');
+  }
+
 }
