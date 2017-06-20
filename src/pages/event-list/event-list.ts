@@ -12,7 +12,11 @@ import { EventProvider } from '../../providers/event/event';
 export class EventListPage {
   public eventList: Array<any>;
 
-  constructor(public navCtrl: NavController, public eventProvider: EventProvider) {}
+  constructor(
+    public navCtrl: NavController,
+    public eventProvider: EventProvider) {
+
+    }
 
   ionViewDidEnter() {
     this.eventProvider.getEventList().on('value', snapshot => {
