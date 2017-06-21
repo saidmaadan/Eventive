@@ -29,6 +29,7 @@ export class AuthProvider {
   }
 
   logoutUser(): firebase.Promise<void>{
+    this.userProfileRef.child(this.fireAuth.currentUser.uid).off();
     return this.fireAuth.signOut();
   }
 
